@@ -1,0 +1,156 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 55%; } }
+  @media only screen and (max-width: 31.25em) {
+    html {
+      font-size: 50%; } }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+body {
+  background-color: #2a2828;
+  background-image: url("https://img.icons8.com/ios/452/js.png");
+  background-size: 40px;
+  background-attachment: fixed; }
+
+.site-container {
+  display: grid;
+  grid-template-columns: minmax(min-content, max-content) minmax(75%, 1fr);
+  grid-column-gap: 2rem;
+  max-width: 140rem;
+  margin: 2rem auto;
+  border: 2px solid #4c4a4a;
+  background-color: #2a2828; }
+  @media only screen and (max-width: 87.5em) {
+    .site-container {
+      margin: 0;
+      width: 100%; } }
+  @media only screen and (max-width: 56.25em) {
+    .site-container {
+      grid-template-columns: minmax(min-content, 1fr); } }
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #ccc;
+  font-size: 1.4rem; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+code {
+  font-family: "JetBrains Mono", monospace;
+  font-size: inherit;
+  line-height: 1.4; }
+
+.keyword {
+  color: #894a18; }
+
+.comment {
+  color: #4c4a4a; }
+
+.method {
+  color: #eac342; }
+
+.code-text {
+  color: #1c401a; }
+
+.header {
+  font-size: 2.6rem;
+  font-weight: 500;
+  margin: 2rem 0; }
+
+.header {
+  margin: 2rem 0; }
+
+.paragraph {
+  margin-bottom: 1rem; }
+
+.code {
+  display: inline-block;
+  width: calc(100% - 6rem);
+  margin: 1rem 3rem;
+  padding: 1rem;
+  white-space: pre-line;
+  background-color: #1d1c1c;
+  border-radius: 5px; }
+  @media only screen and (max-width: 31.25em) {
+    .code {
+      width: 100%;
+      margin: 1rem 0; } }
+
+.main-body {
+  padding: 3rem 5rem 3rem 3rem; }
+  .main-body__list {
+    margin-left: 4rem; }
+  .main-body a {
+    text-decoration: underline; }
+
+.nav {
+  position: relative;
+  border-right: 2px solid #4c4a4a; }
+  .nav__link {
+    display: inline-block;
+    width: 100%;
+    padding: 2rem;
+    border-bottom: 1px solid #4c4a4a;
+    cursor: pointer; }
+    .nav__link:hover {
+      background-color: #1d1c1c; }
+    @media only screen and (max-width: 56.25em) {
+      .nav__link {
+        text-align: center;
+        display: none; } }
+  .nav .header {
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 0;
+    border-bottom: 1px solid #4c4a4a; }
+    @media only screen and (max-width: 18.75em) {
+      .nav .header {
+        text-align: left; } }
+  .nav .burger-menu {
+    position: absolute;
+    right: 2rem;
+    top: 4rem;
+    display: none; }
+    .nav .burger-menu .burger-icon, .nav .burger-menu .burger-icon:before, .nav .burger-menu .burger-icon:after {
+      position: relative;
+      display: inline-block;
+      width: 30px;
+      height: 3px;
+      border-radius: 3px;
+      background-color: #ccc;
+      transition: all .2s; }
+      .nav .burger-menu .burger-icon:before {
+        content: "";
+        position: absolute;
+        top: -6px; }
+      .nav .burger-menu .burger-icon:after {
+        content: "";
+        position: absolute;
+        top: 6px; }
+    @media only screen and (max-width: 56.25em) {
+      .nav .burger-menu {
+        display: inline-block; } }
+  .nav .burger-checkbox {
+    display: none; }
+    .nav .burger-checkbox:checked ~ a {
+      display: inline-block; }
+    .nav .burger-checkbox:checked ~ .burger-menu .burger-icon, .nav .burger-checkbox:checked ~ .burger-menu .burger-icon:before, .nav .burger-checkbox:checked ~ .burger-menu .burger-icon:after {
+      background-color: transparent; }
+      .nav .burger-checkbox:checked ~ .burger-menu .burger-icon:before, .nav .burger-checkbox:checked ~ .burger-menu .burger-icon:after {
+        top: 0;
+        background-color: #ccc; }
+      .nav .burger-checkbox:checked ~ .burger-menu .burger-icon:before {
+        transform: rotate(135deg); }
+      .nav .burger-checkbox:checked ~ .burger-menu .burger-icon:after {
+        transform: rotate(-135deg); }

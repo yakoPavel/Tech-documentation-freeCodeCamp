@@ -1,0 +1,96 @@
+.nav {
+  position: relative;
+  border-right: 2px solid $color-comment;
+
+  &__link {
+    display: inline-block;
+    width: 100%;
+    padding: 2rem;
+    border-bottom: 1px solid $color-comment;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($color-primary, 5%);
+    }
+
+    @media only screen and (max-width: $bp-large) {
+      text-align: center;
+      display: none;
+    }
+  }
+
+  .header {
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 0;
+    border-bottom: 1px solid $color-comment;
+
+    @media only screen and (max-width: $bp-smallest) {
+      text-align: left;
+    }
+  }
+
+  // Burger menu
+  .burger-menu {
+    position: absolute;
+    right: 2rem;
+    top: 4rem;
+    display: none;
+
+    .burger-icon {
+      position: relative;
+      display: inline-block;
+      width: 30px;
+      height: 3px;
+      border-radius: 3px;
+      background-color: $color-font;
+      transition: all .2s;
+
+      &:before {
+        @extend .burger-icon;
+        content: "";
+        position: absolute;
+        top: -6px;
+      }
+
+      &:after {
+        @extend .burger-icon;
+        content: "";
+        position: absolute;
+        top: 6px;
+      }
+    }
+
+    @media only screen and (max-width: $bp-large) {
+      display: inline-block;
+    }
+  }
+
+  .burger-checkbox {
+    display: none;
+
+    &:checked {
+      & ~ a {
+        display: inline-block;
+      }
+
+      & ~ .burger-menu .burger-icon {
+        background-color: transparent;
+
+        &:before,
+        &:after {
+          top: 0;
+          background-color: $color-font;
+        }
+
+        &:before {
+          transform: rotate(135deg);
+        }
+
+        &:after {
+          transform: rotate(-135deg);
+        }
+      }
+    }
+  }
+}

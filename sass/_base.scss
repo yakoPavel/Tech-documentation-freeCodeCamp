@@ -1,0 +1,63 @@
+$primary-font: 'Roboto', sans-serif;
+$code-font: 'JetBrains Mono', monospace;
+
+$color-primary: #2a2828;
+$color-font: #ccc;
+$color-keyword: #894a18;
+$color-comment: #4c4a4a;
+$color-method: #eac342;
+$color-code-text: #1c401a;
+
+$bp-largest: 87.5em;   // 1400px - main content width
+$bp-large: 56.25em;    // 900px
+$bp-medium: 43.75em;   // 700px
+$bp-small: 31.25em;    // 500px
+$bp-smallest: 18.75em; // 300px
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 55%;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 50%;
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $color-primary;
+  background-image: url("https://img.icons8.com/ios/452/js.png");
+  background-size: 40px;
+  background-attachment: fixed;
+}
+
+.site-container {
+  display: grid;
+  grid-template-columns: minmax(min-content, max-content) minmax(75%, 1fr);
+  grid-column-gap: 2rem;
+  max-width: 140rem;
+  margin: 2rem auto;
+  border: 2px solid $color-comment;
+  background-color: $color-primary;
+
+  @media only screen and (max-width: $bp-largest) {
+    margin: 0;
+    width: 100%;
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    grid-template-columns: minmax(min-content, 1fr);
+  }
+}
+

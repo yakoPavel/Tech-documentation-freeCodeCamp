@@ -1,0 +1,39 @@
+body {
+  font-family: $primary-font;
+  color: $color-font;
+  font-size: 1.4rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+code {
+  font-family: $code-font;
+  font-size: inherit;
+  line-height: 1.4;
+}
+
+.keyword {
+  color: $color-keyword;
+}
+
+.comment {
+  color: $color-comment;
+}
+
+.method {
+  color: $color-method;
+}
+
+.code-text {
+  color: $color-code-text;
+}
+
+.header {
+  font-size: 2.6rem;
+  font-weight: 500;
+  margin: 2rem 0;
+}
+
